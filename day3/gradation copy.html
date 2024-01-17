@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+           
+        }
+        .grad{
+            background: radial-gradient(pink, yellow, blue);
+        }
+        .grad2{
+            background: radial-gradient(circle, blue, white, yellow);
+        }
+        .grad3{
+            background: radial-gradient(circle at 20% 30%, blue, white , blue);
+        }
+        .grad4{
+            background: radial-gradient(circle closest-side at 20% 50%, blue, white , blue);
+        }
+        .grad5{
+            background: radial-gradient(circle closest-corner at 30% 40%, blue, white , blue);
+        }
+        .grad6{
+            background: radial-gradient(circle farthest-side at 20% 50%, blue, white , blue);
+        }
+        .grad7{
+            background: radial-gradient(circle farthest-corner at 30% 40%, blue, white , blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="box grad"></div>
+    <div class="box grad2"></div>
+    <div class="box grad3"></div>
+    <div class="box grad4"></div>
+    <div class="box grad5"></div>
+    <div class="box grad6"></div>
+    <div class="box grad7"></div>
+
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 회원정보 -->
+
+<body>
+    <!-- 페이지 전환하면서 데이터 정보 저장-->
+    <form action="img.html">
+        <!-- ㅁ박스 만들어줌 -->
+        <fieldset>
+
+            <legend>회원정보 입력란</legend>
+            <div> 이름: <input id="userName" type="text" value="김승인 " disabled> </div>
+            <div> 아이디: <input id="userId" type="text" autofocus required> </div>
+            <div> 비밀번호: <input placeholder="영어+숫자+특수문자" type="password"> </div>
+            <label>
+                <div> 생년월일: <input placeholder="19960115(예시)" type="number"></div>
+            </label>
+
+            <!-- 중복x -->
+            <div>
+                <input type="radio" name="gender" id="man" checked>
+                <label for="man">남성</label>
+                <label>
+                    <input type="radio" name="gender"> 여성
+                </label>
+                <input type="radio" name="gender"> 성전환
+            </div>
+            <!-- 체크박스 만들기 -->
+            <div>
+                <input type="checkbox"> 운동
+                <input type="checkbox"> 숨쉬기
+            </div>
+
+            <!--  -->
+            <label>
+                이메일
+                <input type="text" placeholder="메일주소">
+                @
+                <select id="email">
+                    <option>직접입력</option>
+                    <option value = "naver">naver.com</option>
+                    <option value = "google">google.com</option>
+                    <option value = "hanmail">hanmail.com</option>
+                </select>
+            </label>
+            <div>
+                <textarea rows="5" cols="50>" placeholder="아무거나 입력해주세요"></textarea>
+            </div>
+             
+        </fieldset>
+        <button onclick="alert('가입해 주셔서 베리베리 감사')">다음</button>
+        <input type="submit" value="완료">
+        <input type="reset" value="취소">
+
+    </form>
+</body>
+
+</html>

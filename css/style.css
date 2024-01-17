@@ -1,0 +1,16 @@
+
+
+/* <!-- 외부파일(.css)만든 후 링크 연결[주로 사용] --> */
+        .box {
+            /* 상하좌우여백 */
+            margin: 10px;
+            background-color: yellow;
+            height: 50px;
+            width: 50px;
+            }
+        .bg-red{
+            background-color: red;
+        }
+        .bg-blue{
+            background-color: blue;
+        }

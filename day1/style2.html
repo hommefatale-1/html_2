@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" re1="stylesheet">
+    <style>
+    .box {
+    /* 상하좌우여백 */
+    /* 위 오른쪽 아래 왼쪽 */
+     margin: 100px 500px 200px 400px;
+     background-color: yellow;
+     height: 100px;
+     width: 100px;
+     border: 2px solid black;
+    }
+    .bg-red{
+     background-color: red;
+    }
+    .bg-blue{
+     background-color: blue;
+    }   
+    </style>
+
+    <!-- 
+        /* 클래스 이름으로 관리한다 */
+        .box {
+            /* 상하좌우여백 */
+            margin: 10px;
+            background-color: yellow;
+            height: 50px;
+            width: 50px;
+            }
+        .bg-red{
+            background-color: red;
+        }
+        .bg-blue{
+            background-color: blue;
+        } -->
+
+
+</head>
+
+<body>
+    <!-- css적용 방법 -->
+    <!-- 외부파일(.css)만든 후 링크 연결[주로 사용] -->
+    <!-- head영역에 stule태그를 이용해서 정의 -->
+    <!-- 태그내에 직접 작성(인라인 속성) [비추천]-->
+    <!--     
+    <div style="margin: 10px; background-color: yellow; height: 50px;
+    width: 50px;"></div>
+    <div style="margin: 10px; background-color: red; height: 50px;
+    width: 50px;"></div>
+    <div style="margin: 10px; background-color: blue; height: 50px;
+    width: 50px;"></div> -->
+    <div class="box">JAVA</div>
+    <div class="box bg-red">ORACLE</div>
+    <div class ="box b">HTML</div>
+
+</body>
+
+</html>
