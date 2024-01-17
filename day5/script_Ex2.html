@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #txt{
+            font-size: 20px;
+            color: pink;
+            font-weight: bold ;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="event1()">인사말</button>
+    <div id="txt">졸리다 자고싶다 집에가고싶다.<SEsfses/div>
+    <div id="txt">졸리다 자고싶다 집에가고싶다.</div>    
+    <div id="txt">졸리다 자고싶다 집에가고싶다.</div>
+
+</body>
+</html>d
+<script>
+    function event1(){
+        // document.write("<div style='color:red;'>안녕하세요!</div>");
+        // document.write("<div>안!</div>");
+        // document.write("<div>안녕!</div>");
+        // document.write("<div>안녕하!</div>");
+    
+        var obj = document.getElementById("txt");
+        
+        
+        obj.style.color="blue";
+        obj.innerText="스크랩 재미없다"
+        obj.style.fontSize: 30px;
+        console.log(obj.innerText);
+    }
+</script>  

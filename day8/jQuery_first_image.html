@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 제이쿼리 사용하는 방법 -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+    }
+  </style>
+
+</head>
+<div><img src="../image/kirby2.jpg" alt="kirby"></div>
+<dib><button>버튼!</button></dib>
+<div id="txt"></div>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  // jQuery 약자:$
+  $(function () {
+    $("button").on("click", function () {
+      // .attr()	해당 요소의 명시된 속성의 속성값을 반환하거나 설정한다.
+      var link = $("img").attr("src", "../image/cup-1.jpg");
+      $("#txt").html(link);
+    });
+  });
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 20px;
+        }
+
+        .txt {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 버튼 클릭시 색 변경 -->
+    <div><button onclick="colorEX()">색 변경</button></div>
+    <div class="txt">빨간색 - 파랑색</div>
+    <!-- 버튼 클릭시 이미지 사라짐 -->
+    <div><button onclick="imgEx()">이미지</button></div>
+    <div class="img"><img src="../image/kirby2.jpg" width="200px"></div>
+</body>
+
+</html>
+<script>
+    // <!-- 버튼 클릭시 색 변경 -->
+    function colorEX() {
+        var obj = document.querySelector(".txt");
+        //    obj.style.color ="blue";
+        console.log(obj.style.color || obj.style.color == '');
+
+        if (obj.style.color == 'red') {
+            obj.style.color = "blue";
+        } else {
+            obj.style.color = "red";
+        }
+    }
+    // <!-- 버튼 클릭시 이미지 사라짐 -->ss
+    function imgEx() {
+        var obj = document.querySelector(".img");
+        // obj.style.display == 'noon';
+
+        if (obj.style.display != 'none') {
+            obj.style.display = 'none';
+        } else {
+            obj.style.display = 'block';
+        }
+    }
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="sub">과목명</div>
+    <ul>
+        <li class="sub">자바</li>
+        <li id="oracle">오라클</li>
+        <li class="sub">html</li>
+        <li>javascript</li>
+    </ul>
+</body>
+
+</html>
+<script>
+    // 클래스를 이용한 색 변경
+    // let list =document.getElementsByTagName('li');
+    // for(let i=0; i<list.length; i++){
+    //     list[i].style.color = 'red';
+    // }
+
+    // 클래스 sub 색상 변경
+    let obj = document.getElementsByClassName('sub');
+    for (let i = 0; i < obj.length; i++) {
+        obj[i].style.color = 'red';
+    }
+</script>

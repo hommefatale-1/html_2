@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .time{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>현재시간 :  <span id="time" class="time"></span></div>
+</body>
+</html>
+<script>
+    // 실시간 시간
+    setInterval(displayNow, 1000);
+    setTimeout(displayNow, 5000);
+     function displayNow(){
+    setTimeout(5000);
+    var now = new Date();
+    var time = now.toLocaleTimeString();
+    document.querySelector("#time").innerHTML = time;
+ }
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming</title>
+    <style>
+        #container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        li {
+            list-style: none;
+        }
+       
+    </style>
+</head>
+
+<body>
+    
+    <div id="container">
+        <h1>메모장<i class="fi fi-rr-delete-document"></i></h1>       
+        <input type="text" id="txt" autofocus>
+        <button onclick="add();">추가</button>
+        <hr>
+        <ul id="itemList"></ul>
+    </div>
+</body>
+</html>
+<script>
+    function add() {
+        // <li></li>
+        var newItem = document.createElement("li"); 
+        // 하나의
+        var txt = document.querySelector("#txt");
+        newItem.innerHTML = txt.value + '<i class="fi fi-rr-delete-document"></i>';
+        // 
+        var itemList = document.querySelector("#itemList");
+        itemList.appendChild(newItem); 
+        document.querySelector("#txt").value = "";
+        // 뭐지?
+        // newItem.addEventListener("click", function(){
+        //     alert(this.innerHTML);
+        //     // 선택시 삭제
+        //     // this.remove();
+        //     // 
+        //     this.parentNode.removeChild(this);
+        // });
+
+        // 이미지 선택시 삭제
+        let list = document.querySelectorAll('i');
+        for(let i=0; i<list.length; i++){
+            list[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+</script>

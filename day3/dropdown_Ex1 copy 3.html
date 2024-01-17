@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            /* display: inline-block; */
+            background-color: #ccc;   
+            width: 100px;
+            height: 30px;  
+            text-align: center;      
+            line-height: 30px;
+            margin : 0;
+            float: left;
+            list-style: none;
+        }
+        a {
+            display:block;
+            padding:10px 20px;
+            background-color:#ccc;
+        }
+        a:link, a:visited {
+            color:black;
+            text-decoration: none;
+        }
+       
+        .menu, .sub-menu{
+            background-color: #f9f9f9;
+            width: 100px;
+            box-shadow: 1px 3px 8px 3px #e7e3e3;
+            display: none;
+        }
+        .menu a, .sub-menu a{
+            display: block;
+            padding : 10px;
+            cursor: pointer;
+        }
+        .sub-top-menu {
+            position: relative;
+        }
+        .sub-menu {
+            position: absolute;
+            top: 0px;
+            left : 100px;
+        }
+        .top-menu:hover .menu, .sub-top-menu:hover .sub-menu{
+            display: block;
+        }
+        .menu a:hover, .sub-menu a:hover {
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="top-menu">
+            <a href="#">메뉴1</a>
+            <div class="menu">
+                <a>Menu 1</a>
+                <div class="sub-top-menu">
+                    <a>Menu 2</a>
+                    <div class="sub-menu">
+                        <a>Sub 1</a>
+                        <a>Sub 2</a>
+                        <a>Sub 3</a>
+                    </div>
+                </div>
+                <div class="sub-top-menu">
+                    <a>Menu 3</a>
+                    <div class="sub-menu">
+                        <a>Sub 1</a>
+                        <a>Sub 2</a>
+                        <a>Sub 3</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="top-menu">
+            <a href="#">메뉴2</a>
+            <div class="menu">
+                <a>Menu 1</a>
+                <a>Menu 2</a>
+                <a>Menu 3</a>
+            </div>
+        </li>
+        <li class="top-menu">
+            <a href="#">메뉴3</a>
+            <div class="menu">
+                <a>Menu 1</a>
+                <a>Menu 2</a>
+                <a>Menu 3</a>
+            </div>
+        </li>
+        <li class="top-menu">
+            <a href="#">메뉴4</a>
+            <div class="menu">
+                <a>Menu 1</a>
+                <a>Menu 2</a>
+                <a>Menu 3</a>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

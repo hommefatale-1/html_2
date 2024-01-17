@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <h1>할 일 목록</h1>
+    </div>
+    <ul>
+        <li>&check;할 일 1</li>
+        <li>&check;할 일 2</li>
+        <li>&check;할 일 3</li>
+        <li>&check;할 일 4</li>
+        <li>&check;할 일 5</li>
+    </ul>
+</body>
+
+</html>
+<script>
+
+    let obj = document.querySelectorAll("li");
+    for (let i = 0; i < obj.length; i++) {
+        obj[i].addEventListener("click", function(){
+         if (this.style.color == "red") {
+                this.style.color = "black"
+                this.style.textDecoration = "noon";
+            } else {
+                this.style.color ="red";
+                this.style.textDecoration = "line-through";
+            }
+        });
+    }
+
+
+
+</script>

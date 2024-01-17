@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function ligScope(){
+        let local = 2;
+        if(local){
+            let local = '다른 값';
+            console.log('블럭안의 var:', local);
+        }
+        console('local', local);
+    }
+</script>

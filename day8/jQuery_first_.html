@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td {
+            border : 1px solid black;
+            text-align: center;
+        }
+        td {
+            padding : 10px 20px;
+        }
+        div {
+            margin : 10px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+    <div>
+        <button id="odd">홀수번째</button>
+        <button id="even">짝수번째</button>
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        $("#odd").on("click",function(){
+            $("tr:odd").css("backgroundColor","black");
+            $("tr:even").css("backgroundColor","white");
+        });
+        $("#even").on("click",function(){
+            $("tr:odd").css("backgroundColor","white");
+            $("tr:even").css("backgroundColor","black");
+        });
+    });
+</script>

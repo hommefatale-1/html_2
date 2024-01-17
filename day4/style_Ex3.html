@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 밑줄제거 */
+        a {
+            text-decoration: none;
+        }
+
+        a[class="kor"] {
+            font-style: italic;
+        }
+
+        /* 하이픈 전 단어가 맞으면 적용 */
+        a[class |="us"] {
+            font-style: italic;
+        }
+
+        /* 단어가 전체 맞아야 적용 */
+        a[class ^="chn"] {
+            font-style: italic;
+        }
+        a[href$="com"]{
+            font-style: initial;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  -->
+    <div><a href="javascript:;" target="_blank" class="kor">링크는 뭘까요?</a></div><br>
+    <div><a href="javascript:;" target="_self" class="us-eng">링크링크뉸 뭘까요?</a></div><br>
+    <div><a href="javascript:;" target="_self" class="chn">링크링크뉸 뭘까요?</a></div><br>
+    <div></div><a href="naver.com">네이버</a></div>
+    <div><a href="daum.com">다음</a></div>
+    <!--  -->
+    <div><a>링크랑 타켓도 없는 a태그</a></div>
+</body>
+
+</html>

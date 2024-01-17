@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>커비 프로필</title>
     <style>
         /* 배경화면 */
-        #bi {
+        body {
             background-image: url('../image/kirby1.jpg');
         }
 
@@ -18,61 +18,225 @@
             margin: 20px auto;
             background-position: center;
         }
+
         /* 왼쪽 틀 */
-        .body1 {
+        #L_body {
             width: 30%;
             height: 900px;
-            background-color: rgba(179, 27, 146, 0.377);  
-            border: 2px double rgba(0, 0, 0, 0.5);
+            background-color: rgba(179, 27, 146, 0.377);
+            border: 2px double rgba(236, 8, 206, 0.5);
             border-radius: 10px;
             box-sizing: border-box;
             float: left;
         }
 
-        .box1 {
-            width: 5%;
-            height: 900px;
-            background-color: black;
+        /* 프로필 */
+        .L_body_picture {
+            background-image: url(../image/images.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgba(0, 0, 0, 0.65);
+            border-radius: 50px;
+            margin: 20px auto;
+            animation-name: ani1;
+            animation-duration: 1s;
+            animation-iteration-count: 5;
+        }
+
+        /* 이름 */
+        .name_txt1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            box-sizing: border-box;
+            text-transform: capitalize
+        }
+
+        /* 이름 소개 */
+        .name_introduce {
+            font-size: 15px;
+            text-align: center;
+            font-weight: bolder;
+            box-sizing: border-box;
+            margin: 10px auto;
+        }
+
+        /* 주소 */
+        .address {
+            font-size: 15px;
+            box-sizing: border-box;
+            margin: 5px auto;
+            margin-left: 25px;
+            font-style: oblique;
+        }
+
+        /* 빈 여백 */
+        .clear_space {
+            padding: 50px;
+        }
+
+        /*링크 이미지 */
+        .kirby_image {
+            width: 100px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        .clear_space1 {
+            padding: 95px;
+        }
+
+        .text {
+            width: 90%;
+            margin: 10px auto;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        /* 오른쪽 틀 1번째 */
+        #R_body0 {
+            width: 70%;
+            height: 300px;
+            background-color: rgba(224, 12, 231, 0.377);
+            box-sizing: border-box;
+            border: 3px double pink;
+            border-radius: 10px;
             float: left;
         }
 
-        .image {
-            background-image: url("../image/images.jpg");
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            top: 20px;
-            left: 30px;
-            width: 80%;
+        /* 오른쪽 틀 2번째 */
+        #R_body1 {
+            width: 70%;
             height: 300px;
-            /* line-height: 600px; */
-            /* background-repeat: no-repeat center;  */
+            background-color: rgba(224, 12, 231, 0.377);
+            box-sizing: border-box;
+            border: 3px double pink;
+            border-radius: 10px;
+            float: left;
         }
 
-        .txt {
-            font-size: 50px;
-            color: white;
-            text-align: center;
+
+        /* 오른쪽 틀 3번째 */
+        #R_body2 {
+            width: 70%;
+            height: 300px;
+            background-color: rgba(224, 12, 231, 0.377);
+            box-sizing: border-box;
+            border: 3px double pink;
+            border-radius: 10px;
+            float: left;
+        }
+
+        /* 프로필 회전 */
+        @keyframes ani1 {
+
+            /* 처음지점 */
+            from {
+
+                transform: rotateX(0deg);
+            }
+
+            /* 중간지점 */
+            50% {
+
+                transform: rotateY(180deg);
+            }
+
+            /* 마지막지점 */
+            to {
+
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 페이지 크기에 따른 변화 */
+        @media screen and (max-width:800px) {
+            #L_body {
+                width: 30%;
+                height: 900px;
+                background-color: rgba(179, 27, 146, 0.377);
+                border: 2px double rgba(236, 8, 206, 0.5);
+                border-radius: 10px;
+                box-sizing: border-box;
+                float: left;
+            }
+
+            #R_body1 {
+                width: 70%;
+                height: 300px;
+                background-color: rgba(224, 12, 231, 0.377);
+                box-sizing: border-box;
+                border: 3px double pink;
+                border-radius: 10px;
+                float: left;
+            }
+
+            #R_body2 {
+                width: 70%;
+                height: 300px;
+                background-color: rgba(224, 12, 231, 0.377);
+                box-sizing: border-box;
+                border: 3px double pink;
+                border-radius: 10px;
+                float: left;
+            }
+            .time{
+                text-align: center;
+                color: blue;
+            }
+
         }
     </style>
 </head>
 
-<body id="bi">
+<body>
     <div id="container">
-        <div class="body1">
-
+        <!-- 프로필 설정 -->
+        <div id="L_body">
+            <div class="L_body_picture"></div>
+            <div class="name_txt1">kirby</div>
+            <div class="name_introduce">귀엽고, 무엇이든 흡입하는 커비입니다</div>
+            <div class="clear_space"></div>
+            <div class="address">seoul, Republic of Korea</div>
+            <div class="address">hommefatale01@naver.com</div>
+            <div class="clear_space"></div>
+            <div class="kirby_image">
+                <a href="https://youtu.be/AdYP14p9HVI?si=CALupg5slpolYOb8" target="_blank" alt="별의커비 귀여운 모음집">
+                    <img src="../image/kirby2.jpg" alt="kirby" style="width: 80px; height: 60px;">"커비 모음집"
+                </a>
+            </div>
+            <div class="clear_space1"></div>
+            <div >현재시간 :<span id="time" class="time"></span></div>
         </div>
-
-    </div>
-    <!-- <div class="box"></div>
-    <div class="body1">
-        <div class="image"></div>
-        <div class="txt"><h2>kirby</h2></div>
-        <div >프론트 앤드 어렵다</div>
-    </div>
-    <div class="body2"></div>
-    <div class="box1"></div> -->
+        <!-- 자기소개서 -->
+        <div id="R_body0">
+            <div class="text">
+                <h1>자기소개서</h1>
+                <p>프로그래밍에 관심이 가지게 되었습니다</p>
+                <p>그로인해 개발자가 되기 위해서 열심히 공부중입니다</p>
+                <P>현재 JAVA, ORACLE, HTML+CSS 공부중입니다 </P>
+                <P>앞으로 a full-stack developer로 성장해 나아가겠습니다</P>
+            </div>
+        </div>
+        <!-- 취미활동 -->
+        <div id="R_body1">
+            <div class="text">
+                <h1>취미활동</h1>
+            </div>
+        </div>
+        <!--  -->
+        <div id="R_body2">
+        </div>
     </div>
 </body>
 
 </html>
+<script>
+    alert("커비 자기소개서 입니다");
+    setInterval(displayNow);
+    function displayNow() {
+        var now = new Date();
+        var time = now.toLocaleTimeString();
+        document.querySelector("#time").innerHTML = time;
+    }
+</script>

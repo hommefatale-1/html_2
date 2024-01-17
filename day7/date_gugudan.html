@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>복습 1</title>
+    <style>
+        div {
+            margin : 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 현재시간 -->
+	<div><button onclick="time()">현재 시간 실시간 빨간색으로 표시하기</button></div>
+	<div><h3>현재 시각: </h3></div>
+	<div id="current"></div>
+	<!-- 구구단  -->
+    <div><input id="num" type="text" placeholder="숫자 입력"></div>
+    <div><button onclick="gugudan1()">구구단 출력</button></div>
+    <div id="gugudan" style="font-size: 20px; color : blue;"></div>
+</body>
+</html>
+<script>
+    // 현재시간
+    function time(){
+        setInterval(innhtml, 1000);
+    }
+    
+    function innhtml() {
+        var now = new Date();
+        document.getElementById("current").innerHTML = "<div style='color:red; font-size:25px;'>" + now.toLocaleTimeString() + "</div>";
+    }
+    // 구구단
+    function gugudan(){
+        var color = ["red", "blue", "green", "orange", "black", "yellow", "purple", "aqua", "gray", "cadetblue"];
+        var num = document.querySelector('#num').value;
+        var gugudan = document.querySelector('#gugudan');
+        var txt = "";
+        for(var i=1; i<=9; i++){
+            txt += "<div style='color : " + color[i-1] + "'>" + num + "*" + i + "=" + (i*num) + "</div>";
+        }
+        gugudan.innerHTML = txt;
+    }
+    // 구구단 출력시 색상 랜덤
+    function gugudan2(){
+        var num = document.querySelector('#num').value;
+        var gugudan = document.querySelector('#gugudan');
+        var txt = "";
+        for(var i=1; i<=9; i++){
+            var color_r = Math.floor(Math.random() * 256).toString(16);
+            var color_g = Math.floor(Math.random() * 256).toString(16);
+            var color_b = Math.floor(Math.random() * 256).toString(16);
+            var color = color_r + "" + color_g + "" + color_b;
+            txt += "<div style='color : #" + color + "'>" + num + "*" + i + "=" + (i*num) + "</div>";
+        }
+        gugudan.innerHTML = txt;
+    }
+</script>

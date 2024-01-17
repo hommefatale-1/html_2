@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 제이쿼리 사용하는 방법 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭시 체크박스 표시</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+        <!-- DB에 저장할 경우 value에 저장해야한다 -->
+        <div><input type="radio" name="subject" value="a"><span>a</span></div>
+        <div><input type="radio" name="subject" value="b"><span>b</span></div>
+        <div><input type="radio" name="subject" value="c"><span>c</span></div>
+        <div><input type="radio" name="subject" value="d"><span>d</span></div>
+        <div>
+            <input type="text">
+            <button id="btn">클릭!</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    // jQuery 약자:$
+    $(function () {
+        $("#btn").on("click", function () {
+            // .next() 스펜태그에 있는 박스를 봐꿔라
+            $("input[name = 'subject']")
+
+        })
+    });
+</script>

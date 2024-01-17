@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 제이쿼리 사용하는 방법 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭시 체크박스 표시</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <!-- DB에 저장할 경우 value에 저장해야한다 -->
+            <li><input type="checkbox" value="a"><span>a</span></li>
+            <li><input type="checkbox" value="b"><span>b</span></li>
+            <input type="checkbox" value="c"><span>c</span>
+            <input type="checkbox" value="d"><span>d</span>
+            <button>클릭!</button>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    // jQuery 약자:$
+    $(function () {
+        $("button").on("click", function () {
+            // .next() 스펜태그에 있는 박스를 봐꿔라
+            $(":check").next().text("체크대땅!");
+            // 
+            $(":check").next().text("체크대땅!");
+
+        })
+    });
+</script>

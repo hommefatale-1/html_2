@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 제이쿼리 사용하는 방법 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호출 및 색상변경</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="kor">
+        <li id="java">java</li>
+        <li><span>oracle</span></li>
+        <li><span>html/css</span></li>
+        <li>javascript</li>
+        <li>jQuery</li>
+        <li></li>
+    </ul>
+    <ul id="eng">
+        <li >자바</li>
+        <li><span>오라클</span></li>
+        <li><span>html/css</span></li>
+        <li>자바스크립트</li>
+        <li>제이쿼리</li>
+        <li></li>
+    </ul>
+    <div id="txt"></div>
+    <button>클릭</button>
+</body>
+
+</html>
+<script>
+    // jQuery 약자:$
+    $(function () {
+        $("button").on("click", function () {
+            // id=kor에 li태그만 찾는다
+            $("#kor").find("li").eq(1).css("color", "blue").end()
+            .eq(3).css("color", "red");
+
+            $("#eng").find("li").eq(2).css("color", "blue").end()
+            .eq(4).css("color", "red");
+        })
+    });
+</script>

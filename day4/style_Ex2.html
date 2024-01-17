@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 밑줄제거 */
+        a {
+            text-decoration: none;
+        }
+
+        /* a태그에 타겟속성에 블링크에만  */
+        a[target="_blank"] {
+            background-color: aqua;
+        }
+
+        /*  */
+        .a-br {
+            border: 1px solid black;
+        }
+
+        /*  */
+        .a-rd {
+            border-radius: 10px;
+        }
+        /* ~= 해당속성 판별하여 적용 */
+        a[class~="a-br"] {
+            box-shadow: 5px 5px 5px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  -->
+    <div><a href="javascript:;" target="_blank" class="a-br">링크는 뭘까요?</a></div><br>
+    <div><a href="javascript:;" target="_self" class="a-br">링크링크뉸 뭘까요?</a></div><br>
+    <div><a href="javascript:;" target="_self" class="a-br a-rd">링크링크뉸 뭘까요?</a></div><br>
+
+    <!--  -->
+    <div><a>링크랑 타켓도 없는 a태그</a></div>
+</body>
+
+</html>

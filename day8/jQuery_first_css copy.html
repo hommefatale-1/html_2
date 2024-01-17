@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 제이쿼리 사용하는 방법 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호출 및 색상변경</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="txt1">안녕</div>
+    <button>클릭</button>
+    <div id="txt2"></div>
+</body>
+</html>
+<script>
+    // jQuery 약자:$
+    $(function () {
+        $("button").on("click", function () {
+        //  id="txt2"에  id="txt1" 문자 넣어서 컬러색 빨간색
+         $("#txt2").html($("#txt1").html()).css("color", "red")
+         .css("backgroundColor", "blue");
+         console.log($("#txt2").css("color"))
+         
+        })
+    });
+</script>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #ccc;
+            padding: 20px;
+        }
+
+        #signup {
+            background: #fff;
+            border: 1px solid #222;
+            border-radius: 5px;
+            padding: 20px;
+            width: 400px;
+            margin: 30px auto;
+        }
+
+        .topBtn {
+            float: right;
+        }
+
+        #signup fieldset {
+            clear: both;
+            border: 1px solid #ccc;
+            margin-bottom: 30px;
+        }
+
+        #signup legend {
+            font-size: 16px;
+            font-weight: bold;
+            padding-left: 5px;
+            padding-bottom: 10px;
+        }
+
+        #signup ul li {
+            line-height: 30px;
+            list-style: none;
+            padding: 5px 10px;
+            margin-bottom: 2px;
+        }
+
+        #signup button {
+            border: 1px solid #222;
+            border-radius: 20px;
+            display: block;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin: auto;
+            padding: 7px 25px;
+        }
+
+        #signup label {
+            float: left;
+            font-size: 13px;
+            width: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="signup">
+        <div class="topBtn">
+            <button id="buyBtn" onclick="statusBtn('sell')" style="border-radius: 0%;">판매회원으로 가입하기</button>
+            <button id="sellBtn" onclick="statusBtn('buy')" style="border-radius: 0%; display : none;">구매회원으로
+                가입하기</button>
+        </div>
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label for="userid">아이디</label>
+                    <input id="userid" name="userid" type="text" required autofocus>
+                </li>
+                <li>
+                    <label for="pwd1">비밀번호</label>
+                    <input id="pwd1" name="pwd1" type="password" required>
+                </li>
+                <li>
+                    <label for="pwd2">비밀번호 확인</label>
+                    <input id="pwd2" name="pwd2" type="password" required>
+                </li>
+                <li id="grade">
+                    <label for="level">회원 등급</label>
+                    <input id="level" name="level" type="text" readonly value="준회원">
+                </li>
+                <li id="num" style="display : none;">
+                    <label for="grade" style="color:red;">사업자 번호</label>
+                    <input id="grade" name="grade" type="text">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="fullname">이름</label>
+                    <input id="fullname" name="fullname" type="text" placeholder="5자미만 공백없이" required>
+                </li>
+                <li>
+                    <label for="email">메일 주소</label>
+                    <input id="email" name="email" type="email" placeholder="abcd@domain.com" required
+                        autocomplete="off">
+                </li>
+                <li>
+                    <label for="tel">연락처</label>
+                    <input id="tel" name="tel" type="tel" autocomplete="off">
+                </li>
+            </ul>
+        </fieldset>
+
+        <button onclick="fnSave()"> 제출 </button>
+
+    </form>
+</body>
+
+</html>
+<script>
+    function fnSave() {
+        // 아이디 입력안할시 아이디입력하기 창 뜨기
+        var id = document.querySelector('#userid').value;
+        if (id == "") {
+            alert("아이디 입력하셈");
+            return;
+        }
+        //   비밀번호 다를시 똑같이 입력하기 창 뜨기
+        if (document.querySelector('#pwd1').value != document.querySelector('#pwd2').value) {
+            alert("비밀번호 똑같이 하셈");
+            return;    
+        }
+        // 다섯글자 이상 이름 적기
+        if (document.querySelector('#fullname').value.length >= 5) {
+            alert("이름 5글자 미만");
+            return;
+        }
+    }
+    function statusBtn(status) {
+        var buy = document.querySelector('#buyBtn');
+        var sell = document.querySelector('#sellBtn');
+        var grade = document.querySelector('#grade');
+        var num = document.querySelector('#num');
+        if (status == 'sell') {
+            buy.style.display = 'none';
+            sell.style.display = 'block';
+            grade.style.display = 'none';
+            num.style.display = 'block';
+
+        } else {
+            sell.style.display = 'none';
+            buy.style.display = 'block';
+            num.style.display = 'none';
+            grade.style.display = 'block';
+        }
+
+    }
+</script>

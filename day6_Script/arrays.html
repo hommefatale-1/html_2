@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열에 관한예시</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 배열선언 문자
+    let arr=["사과", "오렌지", "바나나", "키위"];
+    // 배열선언 숫자,문자가능
+    let arr1=[1, 2, "오렌지", 4, 5];
+    // 합쳐서 출력하기
+    let arr2 =arr.concat(arr1);
+    document.write(arr2);
+    // 선긋기
+    document.write("<hr>");
+    // join 많이 않쓰임 -표시
+    let str =arr.join('-');
+    document.write(str);
+    document.write("<hr>");
+    // 배열 뒤쪽에 딸기가 추가됨
+    arr.push("딸기");
+    document.write(arr + "<br>");
+    // 맨앞 인덱스에 귤 추가
+    arr.unshift("귤");
+    document.write(arr +"<br>");
+    document.write("<hr>");
+    // 넣은거 빼기
+    arr.pop();
+    document.write(arr + "<br>");
+    document.write("<hr>");
+    // 
+    arr.pop();
+    document.write(arr + "<br>");
+    // 맨 앞 배열 인덱스 빼기
+    arr.shift();
+    document.write(arr + "<br>");
+    document.write("<hr>");
+    // 배열 인덱스 2번째까지만 출력
+    arr.splice(2);
+    document.write(arr + "<br>");
+    document.write("<hr>");
+    // 
+    // let arr = arr1.splice(2);
+    // document.write("arr == " + arr + "<br>" );
+    // document.write("arr1 == " + arr1 + "<br>" );
+    // 원본 훼손없이 배열 잘라서 출력
+    arr = arr1.slice(1);
+    document.write("arr2 == " + arr );
+    document.write(arr + "<br>");
+    arr = arr1.slice(2, 4);
+    document.write("arr2 == " + arr );
+
+</script>

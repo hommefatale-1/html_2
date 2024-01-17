@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div><input type="radio" name="subject" value="java"><span>자바</span></div>
+        <div><input type="radio" name="subject" value="oralce"><span>오라클</span></div>
+        <div><input type="radio" name="subject" value="html"><span>html</span></div>
+        <div><input type="radio" name="subject" value="jQuery"><span>jQuery</span></div>
+        <div><button id="bnt">클릭!</button></div>
+        <div><img src="" style="display: none;" width="300px" height="400px"></div>
+    </div>
+</body>
+</html>
+<script>
+    $("#bnt").on("click",function(){
+        let subject = $("input[name = 'subject']:checked").val();
+        let img = $("img");
+        img.css("display", "inline");
+        if(subject == "java"){
+            img.attr("src", "../image/kirby1.jpg");
+        }else if(subject ==  "oracle"){
+            img.attr("src", "../image/kirby2.jpg");
+        }else if(subject ==  "html"){
+            img.attr("src", "../image/kirby1.jpg");
+        }else{
+            img.attr("src", "../image/kirby2.jpg");
+        }
+    });
+</script>

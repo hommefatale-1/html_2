@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <style>
+        .text1{
+            color: red;
+        }
+        .txt2{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div><input type="text" placeholder="이름" v-model='name'></div>
+        <div :class="test ? 'text1' : 'txt2'">안녕!</div>
+        <div v-else>하세요</div>
+        <div>
+            <button @click="fnChange()">클릭!</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list: [],
+            test: true,
+            test1:false,
+            name: ""
+        },// data
+        methods: {
+            fnGetList: function () {
+                alert("왜 오셨나요");
+            },
+
+            fnChange : function () {
+                alert(this.name);
+                this.test = !this.test;
+            }
+        }, // methods
+        created: function () {
+            var self = this;
+            self.fnGetList();
+        }
+    });
+</script>

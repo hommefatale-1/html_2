@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="num" type="text" autofocus required placeholder="숫자를 입력하세요">
+    <button onclick="numEx()">선택</button>
+    <div class="txt">홀수 or 짝수</div>
+</body>
+
+</html>
+<script>
+    function numEx() {
+        var obj = document.querySelector(".txt");
+            // F12에 콘솔 확인
+             console.log(obj.innerHTML);
+             alert(obj.innerHTML);
+        // var num = document.querySelector("#num");
+        // //  console.log(num.Value);
+
+        // if (num.value % 2 == 0) {
+        //     obj.innerHTML = "짝수";
+        // } else {
+        //     obj.innerHTML = "홀수";
+        // }
+    }
+</script>

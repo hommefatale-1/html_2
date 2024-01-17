@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            background-color: #ccc;
+            border: 1px solid;
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        .box {
+            width: 80px;
+            margin: 5px;
+            background-color: tomato;
+            text-align: center;
+        }
+
+        .flex1{
+            flex-wrap: nowrap;
+            flex-flow: row-reverse;
+        }
+        .flex2{
+            flex-wrap: wrap;
+        }
+        .flex3{
+            flex-wrap: wrap-reverse;
+        }
+        .flex4{
+            flex-direction: row;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="container flex1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <div class="container flex2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <div class="container flex3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <div class="container flex4">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+</body>
+
+</html>

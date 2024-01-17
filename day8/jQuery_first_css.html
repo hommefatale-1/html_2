@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 제이쿼리 사용하는 방법 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호출 및 색상변경</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>자바</li>
+        <li><span><오라클/span></li>
+        <li><span>html/css</span></li>
+        <li>javascript</li>
+        <li>jQuery</li>
+        <li></li>
+    </ul>
+    <div></div>
+    <button>클릭</button>
+</body>
+</html>
+<script>
+    // jQuery 약자:$
+    $(function () {
+        let list = $('li');
+        // 객체호출  
+        // $("#아이디") , $(".클래스명"), $("태그명")
+        $("button").on("click", function () {
+            // // 인덱스 값1인 경우 색상변경
+            // $("li:eq(1)").css("color", "red");
+            // $("li:gt(2)").css("color", "red");
+            // // 인덱스1번 아래로만 색상 변경
+            // $("li:lt(1)").css("color", "red");
+            // 인덱스 번호가 홀수인 경우 색상 변경
+            // $("li:odd").css("color", "red");
+            // 인덱스 번호가 짝수인 경우 색상 변경
+            //  $("li:even").css("color", "red");
+            // <span>태그 포함하고 있는 경우 색상 변경
+            // $("li:has(span)").css("color", "red");
+            // ()안에 문자 포함하고 있는 경우 색상 변경
+            // $("li:contains(r)").css("color", "red");
+            // 자식 요소가 있는 경우 색상 변경
+            // $("li:parent").css("color", "red");
+            // 0번째 인덱스가 아닌 next메소드 호출로인한 1번째 인덱스 적용
+            //  $("li:eq(0)").next().css("border", "1px solid red");
+        })
+    });
+</script>

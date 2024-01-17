@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 600px;
+            display: grid;
+            grid-template-columns: repet(7, 1fr);
+            grid-template-rows: repeat(7, 100px);
+            grid-template-areas: "bbox bbox bbox gbox"
+                                 "obox  .   rbox rbox"
+                                 "obox  ybox ybox .  " ;
+        }
+        .box {
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+        .blue-box {
+            background-color: blue;
+            grid-area: bbox;
+        }
+        .orange-box {
+            background-color: orange;
+            grid-area: obox;
+        }
+        .red-box {
+            background-color: red;
+            grid-area: rbox;
+        }
+        .green-box {
+            background-color: green;
+            grid-area: gbox;
+        }
+        .yellow-box {
+            background-color: yellow;
+            grid-area: ybox;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box blue-box">helloworld</div>
+        <div class="box green-box">helloworld</div>
+        <div class="box orange-box">helloworld</div>
+        <div class="box red-box">helloworld</div>
+        <div class="box yellow-box">helloworld</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 클릭시 색상 변경 -->
+    <div class="txt" onclick="coltrEx()">클릭!</div>
+    <!-- 이미지클릭 -->
+    <div><img src="../image/kirby1.jpg" onclick="imgclick()" ></div>
+</body>
+</html>
+<script>
+    // 클릭시 색상변경
+    function coltrEx(){
+        document.querySelector('.txt').style.color ="red";
+    }
+    // 이미지 클릭
+    function imgclick(){
+        alert('이미지 클릭!');
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner 이용한 테이블 만들기</title>
+</head>
+
+<body>
+    <input id="rows" type="text" placeholder="행을 입력하세요"><br>
+    <input id="cols" type="text" placeholder="열을 입력하세요"><br>
+    <button onclick="makeTable()">테이블만들기</button>
+    <div id="tbl"></div>
+</body>
+
+</html>
+<script>
+      
+    function makeTable() {
+        var tbl =document.querySelector('#tbl');
+        var rows = document.querySelector('#rows').value;
+        var cols = document.querySelector('#cols').value;
+        var cnt =1;
+        var tblstr = "<table border='1'>";
+            for(var i = 1; i<=rows; i++){
+                tblstr += "<tr>";
+                    for(var j=1; j<=cols; j++){
+                        tblstr += "<td>"+ cnt++ +"</td>";
+                    }
+                    tblstr += "</tr>";
+            }
+            tblstr += "</table>";
+            tbl.innerHTML = tblstr;
+        
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 600px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 100px);
+        }
+        .box {
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+        .blue-box {
+            background-color: blue;
+            grid-column: 1/4;
+        }
+        .orange-box {
+            background-color: orange;
+            grid-row: 2/4;
+        }
+        .red-box {
+            background-color: red;
+            grid-column: 3/5;
+        }
+        .green-box {
+            background-color: green;
+
+        }
+        .yellow-box {
+            background-color: yellow;
+            grid-column: 2/4;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box blue-box">helloworld</div>
+        <div class="box green-box">helloworld</div>
+        <div class="box orange-box">helloworld</div>
+        <div class="box red-box">helloworld</div>
+        <div class="box yellow-box">helloworld</div>
+    </div>
+</body>
+</html>

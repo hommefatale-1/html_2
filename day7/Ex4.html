@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="link">
+    </div>
+    <button onclick="naver_link">네이버 링크 생성</button>
+</body>
+</html>
+<script>
+    function naver_link(){
+        let link = document.createElement("a");
+        let linkHref = document.createAttribute("href");
+        imgHref.value = "https://www.naver.com/";
+        link.innerHTML = "네이버";
+        link.setAttributeNode(linkHref);
+        document.getElementById("link").appendChild(link);
+
+    }
+
+</script>

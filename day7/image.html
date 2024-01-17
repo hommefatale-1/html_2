@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 이미지 -->
+        <div><img src="../image/kirby2.jpg" id="kirby" ></div>
+        
+</body>
+</html>
+<script>
+    let kirby = document.querySelector('#kirby');
+    // 마우스가 올라갔을때 이미지 1
+    kirby.addEventListener("mouseover", img1)
+    // 마우스가 벗어났을때 이미지 2
+    kirby.addEventListener("mouseout", img2)
+
+    function img1(){
+        kirby.src = "../image/kirby2.jpg"
+    }
+    function img2(){
+        kirby.src = "../image/kirby1.jpg"
+}    
+</script>

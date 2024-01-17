@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 제이쿼리 사용하는 방법 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호출 및 색상변경</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="list">
+        <li >자바</li>
+        <li><span>오라클</span></li>
+        <li><span>html/css</span></li>
+        <li>javascript</li>
+        <li>jQuery</li>
+        <li></li>
+    </ul>
+    <div id="txt"></div>
+    <input type="text" placeholder="입력해주세요">
+    <button id="btn">클릭</button>
+    
+</body>
+
+</html>
+<script>
+    // jQuery 약자:$
+    $(function () {
+        let list = $("li");
+        // .append() 메소드는 선택된 요소의 마지막에 새로운 HTML 요소나 콘텐츠를 추가한다.
+        $("#btn").on("click", function () {
+          $("#list").append("<li>" +$("input").val() + "</li>");
+        })
+    });
+</script>

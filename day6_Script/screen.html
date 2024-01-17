@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="closeEx()">close</button>
+    <button onclick="openEx()">팝업열기!</button>
+    <button onclick="popclose()">팝업닫기!</button>
+
+
+</body>
+
+</html>
+<script>
+    // document.write("<div>화면 넓이: " + screen.width +"</div>")
+    // document.write("<div>화면 높이: " + screen.height +"</div>")
+    // document.write("<div> 사용 가능한 화면 너비: " + screen.availWidth +"</div>")
+    // document.write("<div> 사용 가능한 화면 높이: " + screen.availHeight +"</div>")
+    // 브라우저 닫기
+    function closeEx() {
+        window.close();
+    }
+    // 팝업창 조절(가운데)
+    function openEx() {
+        var left = (screen.availWidth - 300) / 2;
+        var top = (screen.availHeight - 300) / 2;
+        var position = "left" + left + ",top = " + top + ",width=150, heigth =150";
+        pop= window.open("table.html", "", position);
+    }
+    function popclose(){
+        pop.close();
+    }
+</script>

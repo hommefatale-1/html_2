@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            color: blue;
+            font-size: 400px;
+        }
+        
+        @media screen and (max-width:1024px) {
+            .text {
+                font-size: 145px;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .text {
+                font-size: 100px;
+            }
+        }
+        @media screen and (max-width:500px) {
+            .text {
+                font-size: 50px;
+            }
+        }
+        @media screen and (max-width:200px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">안녕하세요</div>
+</body>
+</html>

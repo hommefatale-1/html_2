@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .top {}
+
+        .list {
+            background-color: aqua;
+            width: 100px;
+            display: none;
+            
+        }
+        .list a{
+            display: block;
+        }
+
+        .top:hover .list{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="box">menu1</div>
+        <div class="list">
+            <a>1</a>
+            <a>2</a>
+            <a>3</a>
+        </div>
+    </div>
+</body>
+
+</html>
