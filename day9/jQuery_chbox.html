@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div><input checked id="java" type="checkbox" name="subject" value="java"><span>자바</span></div>
+        <div><input type="checkbox" name="subject" value="oralce"><span>오라클</span></div>
+        <div><input type="checkbox" name="subject" value="html"><span>html</span></div>
+        <div><input type="checkbox" name="subject" value="jQuery"><span>jQuery</span></div>
+        <div>
+            <input type="text">
+            <button id="bnt">클릭!</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("input[name='subject']").on("click", function () {
+            // 체크박스 클릭시 경고창뜸
+             alert($(this).val());
+            // 체크박스 클릭시 경고창에 undefined뜸
+            //  alert($(this).prop("checkbox"));
+            // $("#java").removeProp("checked");
+        });
+    })
+
+</script>

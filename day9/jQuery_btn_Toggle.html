@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid pink;
+            background-color: cyan;
+            border: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div><button id="btn">버튼임!</button></div>
+
+</body>
+
+</html>
+<script>
+    $(function () {
+        // 버튼이라는 객체에 클릭시 실행문
+        $("#btn").on("click", function () {
+            // 버튼 클릭시 
+            $(".box").fadeToggle(3000);
+        });
+    });
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../image/kirby2.jpg">
+    <div id="txt"></div>
+</body>
+</html>
+<script>
+$(function(){
+    $("img").on({
+        "click" : function(){
+            $("#txt").append("<div style='color:red;'>클릭했다</div>");
+        },
+        "mouseover" : function(){
+            $("#txt").append("<div style='color:blue;'>마우스를 올렸다.</div>");
+        },
+        "mouseout" : function(){
+            $("#txt").append("<div style='color:gray;'>마우스를 내렸다.</div>");
+        }
+    });
+
+
+
+
+
+    // $("img").on("mouseleave",function(){
+    //     $("#txt").append("<div>마우스를 내렸다.</div>");
+    // });
+});
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid pink;
+            background-color: cyan;
+            margin: 5px auto;
+        }
+
+        .box1 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid pink;
+            background-color: cyan;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="box"></div>
+    <div><button id="btn0">업!</button></div>
+
+    <div><button id="btn1">다운!</button></div>
+    <div><button id="btn2">토글!</button></div>
+
+</body>
+
+</html>
+<script>
+    $(function () {
+        // 버튼이라는 객체에 클릭시 박스 올라감
+        $("#btn0").on("click", function () {
+            // 버튼 클릭시 
+            $("#box").slideUp();
+        });
+        // 버튼이라는 객체에 클릭시 박스 내려감
+        $("#btn1").on("click", function () {
+            // 버튼 클릭시 
+            $("#box").slideDown();
+        });
+        // 버튼이라는 객체에 클릭시 박스 토글
+        $("#btn2").on("click", function () {
+            // 버튼 클릭시 
+            $("#box").slideToggle();
+        });
+    });
+
+</script>

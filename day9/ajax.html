@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <style>
+        table,tr,td,th {
+            border: 1px solid;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td,th {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <table v-if="flg">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>이메일</td>
+                    <th>웹사이트</td>
+                    <th>버튼</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item, index) in list">
+                    <td>{{index + 1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.website}}</td>
+                    <td><button @click="fnInfo(item)">정보</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div v-if="!flg">
+            <div>{{info.name}}</div>
+            <div>{{info.email}}</div>
+            <div>{{info.company}}</div>
+            <button @click="flg = true">되돌아가기</button>
+        </div>
+
+        <!-- for문을 사용하요 list가 item에 들어가 item.name 출력
+        <div v-for="(item, index) in list">
+            {{index + 1 + '.'}} {{item.name}}
+        </div> -->
+    </div>
+</body>
+
+</html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list: [],
+            info: "",
+            flg : true
+        },// data
+        methods: {
+            fnGetList: function () {
+                var self = this;
+                var nparmap = {};
+                self.flg = true;
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/users",
+                    dataType: "json",
+                    type: "GET",
+                    data: nparmap,
+                    success: function (data) {
+                        self.list = data;
+                    }
+                });
+            },
+            fnInfo: function (item) {
+                let self = this;
+                self.info = item;
+                self.flg = false;
+            }
+        }, // methods
+        created: function () {
+            var self = this;
+            self.fnGetList();
+        }
+    });
+</script>

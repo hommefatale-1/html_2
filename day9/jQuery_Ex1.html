@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin : 5px;
+        }
+    </style>
+</head>
+<body>
+    <div><input type="checkbox" name="subject" value="java"><span>자바</span></div>
+    <div><input type="checkbox" name="subject" value="oracle"><span>오라클</span></div>
+    <div><input type="checkbox" name="subject" value="html"><span>html/css/javascsript</span></div>
+    <div><input type="checkbox" name="subject" value="jquery"><span>jQuery</span></div>
+    <hr>
+    <h3>추가된 목록</h3>
+    <div>[<span id="arr"></span>]</div>
+    <hr>
+    <div id="txt"></div>
+    
+</body>
+</html>
+<script>    
+    $(function(){
+        $("input[name='subject']").on("click", function(){
+            var txt = $(this).val();
+            if($(this).prop("checked")){
+                $('#txt').append("<div>" + txt + "가 추가되었다! </div>");             
+                $('#arr').append("<span class='" + txt + "'>" + txt + " </span>");
+
+                // $('#arr').append("<span class='txt'>" + txt + " </span>");
+            } else {
+                $('#txt').append("<div>" + txt + "가 제거되었다! </div>");
+                $('.' + txt).remove();
+
+                // $('.txt:contains(' + txt + ')').remove();
+            }                       
+        })
+    });
+</script>

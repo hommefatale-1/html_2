@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt{
+            color: red;
+            font-size: 30px;
+        } 
+        .txt1{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="txt">안녕하세요@</div>
+    <button id="btn">클릭!</button>
+    <div><img src="../image/kirby2.jpg" alt="커비"></div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("#btn").on("click",function(){
+            // css 변경
+            // $("div").css({"background-color" : "blue" , "color" : "red"});
+            // 생겼다 지웠다 반복
+             $("#txt").toggleClass("txt1");
+            //클래스 여부를 확인
+            // $("#txt").hasClass("txt");
+            // 
+            // $("img").removeAttr("src");
+        });
+    });
+</script>
