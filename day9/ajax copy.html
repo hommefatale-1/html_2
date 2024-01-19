@@ -7,12 +7,17 @@
     <meta charset="EUC-KR">
     <title>Insert title here</title>
     <style>
-        table,tr,td,th {
+        table,
+        tr,
+        td,
+        th {
             border: 1px solid;
             text-align: center;
             border-collapse: collapse;
         }
-        td,th {
+
+        td,
+        th {
             padding: 5px 10px;
         }
     </style>
@@ -24,26 +29,21 @@
             <thead>
                 <tr>
                     <th>번호</th>
-                    <th>이름</th>
-                    <th>이메일</td>
-                    <th>웹사이트</td>
-                    <th>버튼</td>
+                    <th>아이디</th>
+                    <th>제목</td>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(item, index) in list">
                     <td>{{index + 1}}</td>
-                    <td>{{item.name}}</td>
-                    <td>{{item.email}}</td>
-                    <td>{{item.website}}</td>
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
                     <td><button @click="fnInfo(item)">정보</button></td>
                 </tr>
             </tbody>
         </table>
         <div v-if="!flg">
-            <div>{{info.name}}</div>
-            <div>{{info.email}}</div>
-            <div>{{info.company}}</div>
+            <div>{{info.id}}</div>
             <button @click="flg = true">되돌아가기</button>
         </div>
 
@@ -61,7 +61,7 @@
         data: {
             list: [],
             info: {},
-            flg : true
+            flg: true
         },// data
         methods: {
             fnGetList: function () {
@@ -69,7 +69,7 @@
                 var nparmap = {};
                 self.flg = true;
                 $.ajax({
-                    url: "https://jsonplaceholder.typicode.com/users",
+                    url: "https://jsonplaceholder.typicode.com/albums",
                     dataType: "json",
                     type: "GET",
                     data: nparmap,
