@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .number {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+
+</html>
+<script>
+    game();
+    let start = 0;
+    let last = 0;
+    function game() {
+        var body = document.querySelector("body");
+        let cnt = 1;
+        for (let i = 1; i <= 10; i++) {
+            var width = screen.availWidth;
+            var height = screen.availHeight;
+
+            var x = parseInt(Math.random() * (width - 20));
+            var y = parseInt(Math.random() * (height - 20));
+
+            var num = document.createElement("div");
+            num.innerHTML = i;
+            num.setAttribute("class", "number");
+            num.setAttribute("id", "number_" + i);
+            num.style.top = y + "px";
+            num.style.left = x + "px";
+
+            num.addEventListener("click", function () {
+                
+                if (i == cnt) {
+                    if(cnt == 1){
+                        start = new Date();
+                    }
+                    document.querySelector("#number_" + cnt).remove();
+            
+                    if (cnt == 10) {
+                        last = new Date();
+                        alert((last - start)/1000 + "초");
+                        game();
+                    }
+                    cnt++;
+                }
+            });
+
+            body.append(num);
+
+        };
+    };
+</script>

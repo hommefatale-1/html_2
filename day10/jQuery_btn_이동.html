@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   #container{
+    width: 1000px;
+    height: 200px;
+   }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <button id="btn">클릭!</button>
+</div>
+</body>
+
+</html>
+<script>
+    var body = document.querySelector("body");
+    body.onclick = function(e){
+        var btn = document.querySelector("#btn");
+        btn.style.position = "absolute"
+        btn.style.left = e.pageX + "px";
+        btn.style.top = e.pageY + "px";
+    }   
+ 
+</script>

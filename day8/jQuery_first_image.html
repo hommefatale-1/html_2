@@ -16,9 +16,11 @@
   </style>
 
 </head>
-<div><img src="../image/kirby2.jpg" alt="kirby"></div>
+<div>
+  <img src="" class="txt">
+  <img src="" class="txt">
+</div>
 <dib><button>버튼!</button></dib>
-<div id="txt"></div>
 
 <body>
 
@@ -31,7 +33,9 @@
     $("button").on("click", function () {
       // .attr()	해당 요소의 명시된 속성의 속성값을 반환하거나 설정한다.
       var link = $("img").attr("src", "../image/cup-1.jpg");
-      $("#txt").html(link);
+      $("txt").html(link);
+      var link = $("img").attr("src", "../image/cup-1.jpg");
+      $("txt").html(link);
     });
   });
 </script>

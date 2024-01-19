@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커비 프로필</title>
@@ -32,7 +33,7 @@
 
         /* 프로필 */
         .L_body_picture {
-            background-image: url(../image/images.jpg);
+            background-image: url(../image/kirby1.jpg);
             background-size: cover;
             background-position: center;
             width: 150px;
@@ -79,18 +80,25 @@
 
         /*링크 이미지 */
         .kirby_image {
-            width: 100px;
+            position: relative;
+            left: 50px;
             margin-top: 20px;
-            margin-left: 30px;
+            margin: 10px auto;
         }
+
         .clear_space1 {
-            padding: 95px;
+            padding: 130px;
         }
 
         .text {
             width: 90%;
             margin: 10px auto;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .text1 {
+            text-align: center;
+            font-size: 20px;
         }
 
         /* 오른쪽 틀 1번째 */
@@ -125,6 +133,14 @@
             border: 3px double pink;
             border-radius: 10px;
             float: left;
+        }
+
+        .displatnone {
+            display: none;
+        }
+
+        .displayon {
+            display: block;
         }
 
         /* 프로필 회전 */
@@ -180,7 +196,9 @@
                 border-radius: 10px;
                 float: left;
             }
-            .time{
+
+            .time {
+                position: relative;
                 text-align: center;
                 color: blue;
             }
@@ -204,10 +222,15 @@
                 <a href="https://youtu.be/AdYP14p9HVI?si=CALupg5slpolYOb8" target="_blank" alt="별의커비 귀여운 모음집">
                     <img src="../image/kirby2.jpg" alt="kirby" style="width: 50px; height: 50px;">
                 </a>
-                <a href=""></a>
+                <a href="https://github.com/hommefatale-1/html_2" target="_blank" alt="깃주소">
+                    <img src="../image/github.jpg" alt="kirby" style="width: 50px; height: 50px;">
+                </a>
+                <a href="https://www.instagram.com/hommefatale01/?next=%2F" target="_blank" alt="instagram">
+                    <img src="../image/instagram.jpg" alt="instagram" style="width: 50px; height: 50px;">
+                </a>
             </div>
             <div class="clear_space1"></div>
-            <div >현재시간 :<span id="time" class="time"></span></div>
+            <div class="text1">현재시간 :<span id="time" class="time" style="color: blueviolet;"></span></div>
         </div>
         <!-- 자기소개서 -->
         <div id="R_body0">
@@ -222,7 +245,13 @@
         <!-- 취미활동 -->
         <div id="R_body1">
             <div class="text">
-                <h1>취미활동</h1>
+                <h3>취미활동</h3>
+                <div class="hi">
+                    <img src="" class="txt1">
+                    <img src="" class="txt2">
+                    <img src="" class="txt3">
+                </div>
+                <button class="btn">클릭!</button>
             </div>
         </div>
         <!--  -->
@@ -240,4 +269,20 @@
         var time = now.toLocaleTimeString();
         document.querySelector("#time").innerHTML = time;
     }
+    $(function () {
+        // 버튼이라는 객체에 클릭시 실행문
+        $("button").on("click", function () {
+            // 버튼 클릭시 
+            var link = $(".txt1").attr("src", "../image/hiking.PNG").width(200).height(200);
+            $(".txt1").html(link);
+            var link = $(".txt2").attr("src", "../image/crosfit.PNG").width(200).height(200);
+            $(".txt2").html(link);
+            var link = $(".txt3").attr("src", "../image/movie.PNG").width(200).height(200);
+            $(".txt3").html(link);
+            //   var link = $("img").attr("src", "../image/crosfit.PNG");
+            //  $(".txt2").html(link);
+            // var link = $("img").attr("src", "../image/movie.PNG");
+            //  $("txt").html(link);
+        });
+    });
 </script>
